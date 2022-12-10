@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fd7749be14b, pid=84051, tid=84072
+#
+# JRE version: OpenJDK Runtime Environment 18.9 (11.0.15+10) (build 11.0.15+10)
+# Java VM: OpenJDK 64-Bit Server VM 18.9 (11.0.15+10, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x314b]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x6b
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h" (or dumping to /home/Andrewsha/git/IndieGame/IndieGame/core.84051)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=java-11-openjdk&version=36
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:43131 -javaagent:/home/Andrewsha/eclipse/ide-latest-released/eclipse/configuration/org.eclipse.osgi/1754/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 main.Program
+
+Host: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 8 cores, 7G, Fedora release 36 (Thirty Six)
+Time: Wed Jun 22 12:10:15 2022 MSK elapsed time: 230.851928 seconds (0d 0h 3m 50s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fd770197800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=84072, stack(0x00007fd74c4bc000,0x00007fd74c5bc000)]
+
+Stack: [0x00007fd74c4bc000,0x00007fd74c5bc000],  sp=0x00007fd74c5b8f90,  free space=1011k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x314b]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x6b
+C  [libjimage.so+0x3e5a]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x4a
+C  [libjimage.so+0x43ed]  JIMAGE_FindResource+0x10d
+V  [libjvm.so+0x6095eb]
